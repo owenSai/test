@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <link rel="shortcut icon" href="./images/favicon.ico">
+    <link rel="icon" href="./images/favicon.ico">
+    @@if(typeof title === 'undefined'){
+    <title>Ashare</title>
+    }
+    @@if(typeof title !== 'undefined'){
+    <title>@@title</title>
+    }
+    <script>
+        if(!!window.ActiveXObject || "ActiveXObject" in window ){
+            window.location.href = './ie.html';
+        }
+        (function () {
+        function addWebp() {
+            var htmlClass = document.documentElement.className;
+            if (htmlClass) {
+                document.documentElement.className += ' webp';
+            } else {
+                document.documentElement.className = "webp";
+            }
+        }
+
+        function detect() {
+            var WebP = new Image();
+            WebP.onload = WebP.onerror = function () {
+                if (WebP.height != 2) {
+                    window.localStorage.setItem('webp', 0);
+                } else {
+                    window.localStorage.setItem('webp', 1);
+                }
+            };
+            WebP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+        }
+
+        if (typeof window.localStorage !== 'undefined') {
+            if (window.localStorage.getItem('webp') === '1') {
+                addWebp();
+            } else {
+                detect();
+            }
+        }
+    })(); </script>
+    <link rel="stylesheet" href="./css/common.css">
+    @@if(typeof name !== 'undefined'){
+    <link rel="stylesheet" href="./css/@@name.css">
+    }
+    <script type='text/javascript'>
+        var _vds = _vds || [];
+        window._vds = _vds;
+        (function(){
+            _vds.push(['enableHT', true]);
+            _vds.push(['setAccountId', 'b5bf17f4fa869eff']);
+            (function() {
+                var vds = document.createElement('script');
+                vds.type='text/javascript';
+                vds.async = true;
+                vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(vds, s);
+            })();
+        })();
+    </script>
+</head>
+<body>

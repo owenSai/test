@@ -1,0 +1,17 @@
+<!-- <script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> -->
+<script src="./dep/lib.js"></script>
+<script>
+    Vue.mixin({
+        mounted: function () {
+           if(!this.$parent){
+               setTimeout(function(){
+                   document.getElementById("page_loadding").style.display="none";
+               },100)
+           }
+        }
+    })
+</script>
+<script src="./js/common-chunk.js"></script>
+<script src="./js/@@name.js"></script>
+</body>
+</html> 

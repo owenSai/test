@@ -1,0 +1,32 @@
+{
+  "name": "guorenbao",
+  "version": "0.0.1",
+  "description": "果仁宝项目前端开发",
+  "keywords": [
+    "果仁宝",
+    "张树垚,高二军",
+    "ccforeverd",
+    "gulp"
+  ],
+  "homepage": "",
+  "bugs": "",
+  "license": "",
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-iconfont": "^8.0.1",
+    "gulp-iconfont-css": "^2.1.0",
+    "gulp-sequence": "^0.4.6",
+    "node-sass": "^4.1.1"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "scripts": {
+    "font": "gulp h5-build-svg2font"
+  }
+}

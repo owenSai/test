@@ -1,0 +1,150 @@
+@@include('../../../rep/top.html', {"name": "index","title":"ATT"})
+<div id="index" class="index" v-cloak @click="hideLang">
+    <header class="index-header">
+        <img src="./images/head_bg.png" class="index-header-bg">
+        <!--头部导航条-->
+        <div class="index-header-box">
+            <div class="index-header-nav">
+                <i class="index-header-nav-logo"></i>
+                <ul class="index-header-nav-ul" :class="{on:isFixed}">
+                    <li class="index-header-nav-ul-li" :class="{on:isAdvantage}" @click="location.href='#advantage'">{{$t('m.advantage')}}</li>
+                    <li class="index-header-nav-ul-li" :class="{on:isLine}" @click="location.href='#line'">{{$t('m.line')}}</li>
+                    <li class="index-header-nav-ul-li" :class="{on:isPartner}" @click="clickPartner">{{$t('m.partner')}}</li>
+                    <li class="index-header-nav-ul-li" :class="{on:isContact}" @click="clickContact">{{$t('m.contact')}}</li>
+                    <li class="index-header-nav-ul-li" @click="window.open('./doc/ATTWhitePaper.pdf')">{{$t('m.whitePaper')}}</li>
+                    <li class="index-header-nav-ul-li">
+                        <span @click.stop="chooseLang">{{$t('m.lang')}}<i></i></span>
+                        <ul class="index-header-nav-ul-li-lang" v-show="showLang">
+                            <li @click="changeToEn">EN</li>
+<!--                            <li @click="changeToChinese">中文</li>-->
+                            <li @click="changeToKo">언어</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--头部主要内容区-->
+        <div class="index-header-content">
+            <div class="index-header-content-left">
+                <div class="index-header-content-left-title">ATT</div>
+                <div class="index-header-content-left-desc">{{$t('m.headTitle1')}}</div>
+                <div class="index-header-content-left-content">{{$t('m.headTxt')}}</div>
+            </div>
+            <div class="index-header-content-right">
+                <img src="./images/head_tu.png" class="index-header-content-right-img">
+            </div>
+        </div>
+    </header>
+    <!--技术优势-->
+    <section class="index-ad" id="advantage">
+        <div class="index-ad-title">{{$t('m.advantage')}}</div>
+        <ul class="index-ad-content">
+            <li class="index-ad-content-li">
+                <img src="./images/ad_1.png">
+                <div class="index-ad-content-li-title">{{$t('m.ad1Title')}}</div>
+                <div class="index-ad-content-li-desc">{{$t('m.ad1Desc')}}</div>
+            </li>
+            <li class="index-ad-content-li">
+                <img src="./images/ad_2.png">
+                <div class="index-ad-content-li-title">{{$t('m.ad2Title')}}</div>
+                <div class="index-ad-content-li-desc">{{$t('m.ad2Desc')}}</div>
+            </li>
+            <li class="index-ad-content-li">
+                <img src="./images/ad_3.png">
+                <div class="index-ad-content-li-title">{{$t('m.ad3Title')}}</div>
+                <div class="index-ad-content-li-desc">{{$t('m.ad3Desc')}}</div>
+            </li>
+        </ul>
+        <ul class="index-ad-content">
+            <li class="index-ad-content-li">
+                <img src="./images/ad_4.png">
+                <div class="index-ad-content-li-title">{{$t('m.ad4Title')}}</div>
+                <div class="index-ad-content-li-desc">{{$t('m.ad4Desc')}}</div>
+            </li>
+            <li class="index-ad-content-li">
+                <img src="./images/ad_5.png">
+                <div class="index-ad-content-li-title">{{$t('m.ad5Title')}}</div>
+                <div class="index-ad-content-li-desc">{{$t('m.ad5Desc')}}</div>
+            </li>
+            <li class="index-ad-content-li">
+                <img src="./images/ad_6.png">
+                <div class="index-ad-content-li-title">{{$t('m.ad6Title')}}</div>
+                <div class="index-ad-content-li-desc">{{$t('m.ad6Desc')}}</div>
+            </li>
+        </ul>
+    </section>
+    <!--路线图-->
+    <section class="index-line" id="line">
+        <div class="index-line-title">{{$t('m.line')}}</div>
+        <ul class="index-line-content">
+            <li class="index-line-content-li">
+                <i></i>
+                <div class="index-line-content-li-text">
+                    <div class="index-line-content-li-text-time">{{$t('m.time1')}}</div>
+                    <div class="index-line-content-li-text-title">{{$t('m.line1')}}</div>
+                </div>
+            </li>
+            <li class="index-line-content-li">
+                <i></i>
+                <div class="index-line-content-li-text">
+                    <div class="index-line-content-li-text-time">{{$t('m.time2')}}</div>
+                    <div class="index-line-content-li-text-title">{{$t('m.line2')}}</div>
+                </div>
+            </li>
+            <li class="index-line-content-li">
+                <i></i>
+                <div class="index-line-content-li-text">
+                    <div class="index-line-content-li-text-time">{{$t('m.time3')}}</div>
+                    <div class="index-line-content-li-text-title">{{$t('m.line3')}}</div>
+                </div>
+            </li>
+            <li class="index-line-content-li">
+                <i></i>
+                <div class="index-line-content-li-text">
+                    <div class="index-line-content-li-text-time">{{$t('m.time4')}}</div>
+                    <div class="index-line-content-li-text-title">{{$t('m.line4')}}</div>
+                </div>
+            </li>
+            <li class="index-line-content-li">
+                <i></i>
+                <div class="index-line-content-li-text">
+                    <div class="index-line-content-li-text-time">{{$t('m.time5')}}</div>
+                    <div class="index-line-content-li-text-title">{{$t('m.line5')}}</div>
+                </div>
+            </li>
+            <li class="index-line-content-li">
+                <i></i>
+                <div class="index-line-content-li-text">
+                    <div class="index-line-content-li-text-time">{{$t('m.time6')}}</div>
+                    <div class="index-line-content-li-text-title">{{$t('m.line6')}}</div>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <!--合作伙伴-->
+    <section class="index-partners" id="partner">
+        <div class="index-partners-title">{{$t('m.partner')}}</div>
+        <ul class="index-partners-ul">
+            <li class="index-partners-ul-li"><img src="./images/biy.png"></li>
+            <li class="index-partners-ul-li"><img src="./images/kcash.png"></li>
+            <li class="index-partners-ul-li"><img src="./images/bsj.png"></li>
+            <li class="index-partners-ul-li"><img src="./images/jscj.png"></li>
+        </ul>
+        <ul class="index-partners-ul">
+            <li class="index-partners-ul-li"><img src="./images/ljdian.png"></li>
+            <li class="index-partners-ul-li"><img src="./images/cointelegraph.png"></li>
+            <li class="index-partners-ul-li"><img src="./images/raidcall.png"></li>
+            <li class="index-partners-ul-li"><img src="./images/realivet.png"></li>
+        </ul>
+    </section>
+    <!--联系我们-->
+    <footer class="index-contact" id="contact">
+        <div class="index-contact-title">{{$t('m.contact')}}</div>
+        <div class="index-contact-email">
+            <img src="./images/email.png">
+            <div class="index-contact-email-addr">hi@attnetwork.org</div>
+        </div>
+        <div class="index-contact-copyright">©2019 Copyright by ATT</div>
+    </footer>
+</div>
+@@include('../../../rep/bottom.html', {"name": "index"})

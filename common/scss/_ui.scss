@@ -1,0 +1,72 @@
+/**
+ * @file
+ * @auth jinguangguo
+ * @date 2016/10/17
+ */
+
+.ui-title {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+    color: #333;
+}
+
+.ui-btn {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 15px;
+    width: 400px;
+    min-width: 64px;
+    height: 50px;
+    line-height: 50px;
+    background-color: $button-bg;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18px;
+    cursor:pointer;
+    &:hover {
+        background-color: $button-bg-hover;
+        color: #fff;
+    }
+    //&:active {
+    //    background-color: $color-link-dark;
+    //    color: #fff;
+    //}
+    &--block {
+        display: block;
+        width: 100%;
+    }
+    &--small {
+        height: 24px;
+        line-height: 24px;
+    }
+
+    &[disabled] {
+        pointer-events: none;
+        box-shadow: none;
+        opacity: .65;
+    }
+}
+
+.ui_a {
+    color: $color-link;
+    text-decoration: none;
+    transition: color 0.4s;
+    cursor: pointer;
+    &:hover,
+    &:active,
+    &:link,
+    &:visited {
+        text-decoration: none;
+    }
+    &:hover {
+        color: $color-link-hover;
+        text-decoration: none;
+    }
+    &.gray {
+        color: #666;
+    }
+}

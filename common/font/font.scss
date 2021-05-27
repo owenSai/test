@@ -1,0 +1,194 @@
+@font-face {
+    font-family: "iconfont";
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('eot'),
+    url('../font/iconfont.woff') format('woff'),
+    url('../font/iconfont.ttf') format('truetype'),
+    url('../font/iconfont.svg#iconfont') format('svg');
+}
+
+@mixin icon-styles {
+    font-family: "iconfont";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    // speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+    text-decoration: none;
+    text-transform: none;
+    vertical-align: middle;
+}
+
+%icon {
+    @include icon-styles;
+}
+
+@function icon-char($filename) {
+    $char: "";
+
+    @if $filename == bank-ABC {
+    $char: "\E001";
+}
+    @if $filename == bank-BCM {
+    $char: "\E002";
+}
+    @if $filename == bank-BOC {
+    $char: "\E003";
+}
+    @if $filename == bank-CCB {
+    $char: "\E004";
+}
+    @if $filename == bank-CEB {
+    $char: "\E005";
+}
+    @if $filename == bank-CIB {
+    $char: "\E006";
+}
+    @if $filename == bank-CMB {
+    $char: "\E007";
+}
+    @if $filename == bank-CMBC {
+    $char: "\E008";
+}
+    @if $filename == bank-CNCB {
+    $char: "\E009";
+}
+    @if $filename == bank-GDB {
+    $char: "\E00A";
+}
+    @if $filename == bank-HXB {
+    $char: "\E00B";
+}
+    @if $filename == bank-ICBC {
+    $char: "\E00C";
+}
+    @if $filename == bank-PAB {
+    $char: "\E00D";
+}
+    @if $filename == bank-PSBC {
+    $char: "\E00E";
+}
+    @if $filename == bank-SHB {
+    $char: "\E00F";
+}
+    @if $filename == bank-SPDB {
+    $char: "\E010";
+}
+    @if $filename == close {
+    $char: "\E011";
+}
+    @if $filename == delete {
+    $char: "\E012";
+}
+    @if $filename == g {
+    $char: "\E013";
+}
+    @if $filename == grb-safekeyboard-delete {
+    $char: "\E014";
+}
+    @if $filename == jishu {
+    $char: "\E015";
+}
+    @if $filename == plus {
+    $char: "\E016";
+}
+    @if $filename == triangle {
+    $char: "\E017";
+}
+    @if $filename == wait {
+    $char: "\E018";
+}
+    @if $filename == zijin {
+    $char: "\E019";
+}
+
+@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+&:#{$insert} {
+    @if $extend {
+        @extend %icon;
+    } @else {
+        @include icon-styles;
+    }
+    content: icon-char($filename);
+}
+}
+
+.icon-bank-ABC {
+    @include icon(bank-ABC);
+}
+.icon-bank-BCM {
+    @include icon(bank-BCM);
+}
+.icon-bank-BOC {
+    @include icon(bank-BOC);
+}
+.icon-bank-CCB {
+    @include icon(bank-CCB);
+}
+.icon-bank-CEB {
+    @include icon(bank-CEB);
+}
+.icon-bank-CIB {
+    @include icon(bank-CIB);
+}
+.icon-bank-CMB {
+    @include icon(bank-CMB);
+}
+.icon-bank-CMBC {
+    @include icon(bank-CMBC);
+}
+.icon-bank-CNCB {
+    @include icon(bank-CNCB);
+}
+.icon-bank-GDB {
+    @include icon(bank-GDB);
+}
+.icon-bank-HXB {
+    @include icon(bank-HXB);
+}
+.icon-bank-ICBC {
+    @include icon(bank-ICBC);
+}
+.icon-bank-PAB {
+    @include icon(bank-PAB);
+}
+.icon-bank-PSBC {
+    @include icon(bank-PSBC);
+}
+.icon-bank-SHB {
+    @include icon(bank-SHB);
+}
+.icon-bank-SPDB {
+    @include icon(bank-SPDB);
+}
+.icon-close {
+    @include icon(close);
+}
+.icon-delete {
+    @include icon(delete);
+}
+.icon-g {
+    @include icon(g);
+}
+.icon-grb-safekeyboard-delete {
+    @include icon(grb-safekeyboard-delete);
+}
+.icon-jishu {
+    @include icon(jishu);
+}
+.icon-plus {
+    @include icon(plus);
+}
+.icon-triangle {
+    @include icon(triangle);
+}
+.icon-wait {
+    @include icon(wait);
+}
+.icon-zijin {
+    @include icon(zijin);
+}

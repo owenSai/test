@@ -1,0 +1,103 @@
+{
+  "name": "att",
+  "version": "0.0.1",
+  "description": "ATT官网",
+  "keywords": [
+    "ATT",
+    "ccforeverd",
+    "gulp"
+  ],
+  "homepage": "https://github.com/attnetwork/official_web_private#readme",
+  "bugs": {
+    "url": "https://github.com/attnetwork/official_web_private/issues"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "babel-register": "^6.26.0",
+    "gulp-cli": "^2.3.0",
+    "v-tap": "^2.0.2",
+    "vue": "^2.1.0",
+    "vue-i18n": "^8.18.2",
+    "vue-router": "^2.0.1"
+  },
+  "devDependencies": {
+    "@babel/register": "^7.10.4",
+    "autoprefixer": "^6.7.2",
+    "autoresponse": "^0.4.1",
+    "babel": "^6.23.0",
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.22.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "babel-runtime": "^6.23.0",
+    "browser-sync": "^2.26.14",
+    "css-loader": "^5.2.5",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-filter": "^5.0.0",
+    "gulp-htmlcpr": "^0.1.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-md5-plus": "^0.2.5",
+    "gulp-minify-html": "^1.0.6",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^4.1.0",
+    "gulp-scp2": "^0.2.0",
+    "gulp-sequence": "^1.0.0",
+    "gulp-sourcemaps": "^2.1.1",
+    "gulp-swig": "^0.9.1",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "gulp-webp": "^4.0.1",
+    "gulp-webpack": "^1.5.0",
+    "gulp-webpcss": "^1.1.1",
+    "html-loader": "^0.4.4",
+    "jquery": "^3.5.1",
+    "lodash": "^4.17.21",
+    "log4js": "^0.6.38",
+    "node-sass": "^4.14.1",
+    "postcss-loader": "^1.3.0",
+    "qr.js": "^0.0.0",
+    "raf": "^3.3.2",
+    "require-dir": "^0.3.1",
+    "sass-loader": "^4.0.2",
+    "scss-loader": "0.0.1",
+    "style-loader": "^0.13.1",
+    "superagent": "^3.5.2",
+    "url-loader": "^4.1.1",
+    "vue": "^2.0.3",
+    "vue-loader": "^9.7.0",
+    "vue-resource": "^1.0.3",
+    "vue-router": "^2.0.1",
+    "vue-strap": "^1.1.29",
+    "vuex": "^2.2.1",
+    "webpack": "^5.37.1",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-hot-middleware": "^2.13.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "scripts": {
+    "build": "gulp dev",
+    "public": "gulp prod",
+    "server": "gulp server",
+    "online": "gulp online"
+  },
+  "main": "gulpfile.babel.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/attnetwork/official_web_private.git"
+  },
+  "author": ""
+}
